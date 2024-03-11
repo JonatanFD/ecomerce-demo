@@ -2,26 +2,30 @@
 import CustomTech from "../components/icons/CustomTech";
 ---
 
-<footer class="pt-28 pb-12 px-28 w-full max-w-7xl m-auto text-white">
-  <section class="flex justify-between">
-    <div>
-      <a href="/" class="flex items-center gap-4">
-        <CustomTech size={48} />
-        <span class="text-2xl font-bold"> Custom Tech </span>
-      </a>
-      <p class="w-[300px] mt-5">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos inventore
-        debitis pariatur adipisci voluptatum alias voluptas quod, autem, quasi
-        dolore reprehenderit quisquam sit.
-      </p>
+<footer
+  class="px-6 py-8 w-full bg-[rgb(245,245,247)] lg:pt-28 lg:pb-12 lg:px-28 text-xs"
+>
+  <section class="max-w-4xl m-auto lg:px-4">
+    <div class="flex justify-between">
+      <div>
+        <a href="/" class="flex items-center gap-4">
+          <CustomTech size={32} />
+          <span class="font-bold"> Custom Tech </span>
+        </a>
+        <p class="w-full lg:w-[500px] mt-5">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos
+          inventore debitis pariatur adipisci voluptatum alias voluptas quod,
+          autem, quasi dolore reprehenderit quisquam sit.
+        </p>
+      </div>
     </div>
-  </section>
 
-  <section class="flex justify-between mt-16">
-    <span>Copyright © 2024 demo...</span>
-    <div class="flex gap-8">
-      <a href="/terms">Terms & Conditions</a>
-      <a href="/policy">Privacy Policy</a>
+    <div class="flex flex-col lg:flex-row gap-4 justify-between mt-16">
+      <span>Copyright © 2024 demo...</span>
+      <div class="flex gap-8">
+        <a href="/terms" class="hover:text-blue-600">Terms & Conditions</a>
+        <a href="/policy" class="hover:text-blue-600">Privacy Policy</a>
+      </div>
     </div>
   </section>
 </footer>

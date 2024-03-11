@@ -1,8 +1,134 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import ProductsCarousel from "../components/ProductsCarousel";
+
+const WHY_US_CARDS = [
+  {
+    title: "Customización al máximo",
+    img: "",
+  },
+  {
+    title: "Calidad inigualable",
+    img: "",
+  },
+  {
+    title: "Calidad inigualable",
+    img: "",
+  },
+];
 ---
 
-<Layout title="Custom Tech"> 
-    <section class="max-w-7xl h-[1000px] m-auto text-white">
+<Layout title="Custom Tech">
+  <section class="w-full">
+    {/* Presentation */}
+    <section
+      class="bg-black flex flex-col items-center justify-center text-[#f5f5f7] pt-24 lg:pt-32"
+    >
+      <div class="flex flex-col items-center">
+        <h2
+          class="max-w-[calc(100vw-2rem)] text-center font-medium text-3xl flex flex-col lg:block lg:max-w-none lg:text-5xl fade-in-effect"
+        >
+          <span> Design Your Dream Product </span>
+          <span class="hidden lg:inline">,</span>
+          <span class="your-way-gradient"> Your Way! </span>
+        </h2>
+        <p class="max-w-[calc(100vw-4rem)] text-xl mt-6 font-medium">
+          Unleash your creativity with our customization service
+        </p>
+        <a
+          class="px-5 py-3 text-black cursor-pointer to-[#81de0f] from-[#5dbc31] bg-gradient-to-r font-semibold rounded-full mt-5 border-[2px] border-[#224A16] hover:scale-105 transition"
+          >Start Designing Now</a
+        >
+      </div>
+
+      <div class="max-w-[calc(100vw-2rem)] lg:max-w-[950px] mt-16 h-[300px]">
+        <ProductsCarousel client:only="react" />
+      </div>
     </section>
+
+    {/* Keywords */}
+    <section class="m-auto flex justify-center flex-col">
+      <div class="relative flex flex-col justify-center py-10 bg-white">
+        <div class="text-center mb-8">
+          <h3 class="font-semibold text-3xl lg:text-4xl">Custom Keywords</h3>
+          <p class="text-xl mt-4">Create your master piece</p>
+        </div>
+        <img
+          src="/keyword-2.jpg"
+          alt="keyword 2"
+          class="aspect-[1.47] w-[400px] lg:w-[500px] m-auto"
+        />
+      </div>
+
+      <div class="bg-black py-10">
+        <div class="text-center mb-8 text-white">
+          <h3 class="font-semibold text-3xl lg:text-4xl max-w-sm lg:max-w-2xl m-auto">
+            Transform <span class="ordinary-text">Ordinary</span> Products into <span
+              class="extraordinary-text"
+            >
+              Extraordinary
+            </span>
+            Creations
+          </h3>
+          <p class="text-xl mt-4">Design Your Own Masterpiece</p>
+        </div>
+        <img
+          src="/keyword-3.jpg"
+          alt="keyword 3"
+          class="aspect-[2.1201] w-[400px] lg:w-[500px] m-auto"
+        />
+      </div>
+    </section>
+
+    {/* Cards: Why us */}
+    <section class="max-w-7xl m-auto"></section>
+  </section>
 </Layout>
+
+<style>
+  .your-way-gradient {
+    background: linear-gradient(
+      244.91deg,
+      #d4ffec 15.94%,
+      #57f2cc 48.55%,
+      #4596fb 84.06%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+
+  .ordinary-text {
+    background: linear-gradient(90deg, #757e75 0%, #c3bfbf 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+
+  .extraordinary-text {
+    background: linear-gradient(90deg, #bb2e32 0%, #677993 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+
+  .fade-in-effect {
+    animation-name: fadeIn;
+    animation-duration: 700ms;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      scale: 0.95;
+      opacity: 0;
+    }
+    100% {
+      scale: 1;
+      opacity: 1;
+    }
+  }
+</style>
